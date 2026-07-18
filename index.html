@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRYCE DANIELLE REMOLLO PROFOLIO</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Add FontAwesome for icons if you wish, or remove the <i> tags -->
+        
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About & Resume</a>
+        
+    </nav>
+
+    <div class="main-container">
+        
+        <!-- Header Card -->
+      <header class="header-card">
+    <img src="meme.jpeg" alt="" class="profile-img" id="profile-img">
+    <div class="header-details">
+        <h1>BRYCE DANIELLE REMOLLO PORTFOLIO <span style="color: #3B82F6; font-size: 0.8em;">✔</span></h1>
+        <p class="subtitle">Aspiring Full-Stack Developer | Student Freelancer | UI/UX & SEO</p>
+        <div class="header-buttons">
+            <a href="mailto:your-email@example.com?subject=Inquiry from Portfolio Website" class="btn btn-primary">
+                <i class="far fa-envelope"></i> Send Email
+            </a>
+            <!-- Dark Mode Toggle Button with your specific logo -->
+            <button id="theme-toggle" class="btn">
+                <img src="https://cdn-icons-png.flaticon.com/128/12377/12377255.png" alt="Toggle" style="width: 20px; height: 20px; vertical-align: middle;">
+            </button>
+        </div>
+    </div>
+</header>
+
+        <!-- Content Grid (About Me & Experience) -->
+        <div class="content-grid">
+            
+            <!-- About Me Card -->
+            <section class="content-card">
+                <h2><i class="far fa-user-circle"></i> About Me</h2>
+                <p>
+                    My journey began with a curiosity about how things connect, which eventually led me to pursue a degree in Information Technology, majoring in Network Administration. While my core studies focus on the architecture and security of complex network systems, I am equally passionate about the digital experiences built on top of them. I believe that a solid infrastructure is only half the story; the other half is crafting the seamless, user-centric interfaces that bring technology to life.
+                </p>
+                <p style="margin-top: 15px;">
+                    I am a dedicated developer who thrives at the intersection of structural precision and creative design. Whether I am troubleshooting network protocols or architecting a robust backend, I approach every challenge with the same goal: building high-impact, scalable solutions.
+                </p>
+            </section>
+
+            <!-- Experience Card -->
+            <section class="content-card">
+                <h2><i class="fas fa-briefcase"></i> Experience</h2>
+                <ul class="info-list">
+                    <li>
+                        <div>
+                            <p class="item-title">○ Front-End Development:</p>
+                            <p class="item-subtitle">I leverage HTML and CSS to build clean, responsive, and visually accessible layouts, ensuring that every user has a consistent experience across all devices.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <p class="item-title">○ Dynamic Interactivity</p>
+                            <p class="item-subtitle">I utilize JavaScript to bridge the gap between static design and interactive functionality, turning simple web pages into dynamic, engaging applications.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <p class="item-title">○ Back-End Architecture:</p>
+                            <p class="item-subtitle">Through Laravel, I build powerful, efficient, and secure server-side applications, allowing me to manage data structures and business logic with the elegance and efficiency of the PHP ecosystem.</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Education Card (Optional - to fully match the visual style) -->
+        <div style="margin-top: 30px;">
+            <section class="content-card">
+                <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+                <ul class="info-list">
+                     <li>
+                        <div>
+                            <p class="item-title">Bachelor of Science in Information Technology Major in Network Administration</p>
+                            <p class="item-subtitle">System Plus College Foundation</p>
+                        </div>
+                        <span class="item-date">2020 - 2024</span>
+                    </li>
+                    <!-- Add more education entries here -->
+                </ul>
+            </section>
+        </div>
+
+    </div>
+<script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const profileImg = document.getElementById('profile-img');
+    const body = document.body;
+
+    toggleBtn.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        // Swaps between light mode (meme.jpeg) and dark mode (me.jfif)
+        profileImg.src = body.classList.contains('dark-mode') ? 'me.jfif' : 'light.png';
+    });
+</script>
+</body>
+
+</html>

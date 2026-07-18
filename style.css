@@ -1,0 +1,223 @@
+/* Global Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f9fafb;
+    margin: 0;
+    padding: 0;
+    color: #111827;
+}
+
+/* Navigation */
+nav {
+    background: #ffffff;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    gap: 20px;
+}
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+body.dark-mode nav, 
+body.dark-mode .header-card, 
+body.dark-mode .content-card {
+    background-color: #2d2d2d;
+    color: #e5e7eb;
+}
+
+body.dark-mode .item-title {
+    color: #ffffff;
+}
+
+body.dark-mode .item-subtitle, 
+body.dark-mode .subtitle {
+    color: #a0aec0;
+}
+
+body.dark-mode nav a {
+    color: #ffffff;
+}
+nav a {
+    color: #374151;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+nav a:hover { color: #111827; }
+
+/* Main Container */
+.main-container {
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Header Card */
+.header-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.header-details h1 {
+    margin: 0 0 5px 0;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.subtitle {
+    color: #6b7280;
+    margin: 0 0 15px 0;
+    font-size: 16px;
+}
+
+/* Header Buttons */
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #d1d5db;
+    background: #ffffff;
+    color: #111827;
+}
+
+.btn-primary {
+    background: #111827;
+    color: #ffffff;
+    border: none;
+}
+
+.btn:hover { opacity: 0.9; }
+
+/* Content Grid */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* Content Cards */
+.content-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.content-card h2 {
+    margin: 0 0 15px 0;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.content-card p {
+    color: #4b5563;
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* List Styling (Experience/Education) */
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-list li {
+    padding: 15px 0;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.info-list li:last-child { border-bottom: none; }
+
+.item-title {
+    font-weight: 600;
+    color: #111827;
+    margin: 0 0 4px 0;
+}
+
+.item-subtitle {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 0;
+}
+
+.item-date {
+    font-size: 14px;
+    color: #6b7280;
+    white-space: nowrap;
+    margin-left: 15px;
+    padding-top: 2px;
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .content-grid { grid-template-columns: 1fr; }
+    .header-card { flex-direction: column; text-align: center; align-items: center;}
+    .header-buttons {justify-content: center;}
+}
+/* Dark Mode Text Colors */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff; /* Sets default body text to white */
+}
+
+body.dark-mode nav, 
+body.dark-mode .header-card, 
+body.dark-mode .content-card {
+    background-color: #2d2d2d;
+    color: #ffffff; /* Ensures text inside cards is white */
+}
+
+body.dark-mode h1, 
+body.dark-mode h2 {
+    color: #ffffff; /* Ensures all headings are white */
+}
+
+body.dark-mode .item-title {
+    color: #ffffff; /* Ensures experience/education titles are white */
+}
+
+body.dark-mode .item-subtitle, 
+body.dark-mode .subtitle {
+    color: #d1d5db; /* A light grey for secondary text so it's readable but distinct */
+}
+
+body.dark-mode nav a {
+    color: #ffffff; /* Makes navigation links white */
+}
