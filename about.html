@@ -82,128 +82,156 @@
 
     <div class="main-container">
         
-      
+        <!-- Header / Summary Card -->
         <header class="header-card">
-            <img src="lasts.jpeg" alt="Profile Picture" id="profile-img" class="profile-img">
+            <img src="meme.jpeg" alt="Profile Picture" id="profile-img" class="profile-img">
             <div class="header-details">
                 <h1>Professional Summary</h1>
                 <p class="subtitle">IT Student & Network Administration Major</p>
-                <p style="color: inherit; line-height: 1.6; margin-top: 10px;">
-                    Currently pursuing a degree in Information Technology with a major in Network Administration at System Plus College Foundation. Passionate about bridging secure infrastructure with high-impact, clean web design and full-stack development.
-                </p>
             </div>
         </header>
 
-        
+        <!-- Content Grid for Certificates and Badges -->
         <div class="content-grid">
             
-           
+            <!-- Certificates Section (1 - 4) -->
             <section class="content-card">
-                <h2><i class="fas fa-award"></i> Certificates</h2>
+                <h2><i class="fas fa-award"></i> Certificates (1 - 4)</h2>
                 <p style="font-size: 14px; margin-bottom: 15px;">Click any certificate to view it larger:</p>
                 
                 <div class="badges-grid">
-                  
-                    <div class="badge-item" onclick="openCertModal('1.png', 'CCNA: Introduction to Networks')">
-                        <img src="1.png" alt="Certificate 1" class="badge-img" style="border-radius: 4px; border: 1px solid #e5e7eb;">
+                    <!-- Certificate 1 -->
+                    <div class="badge-item" onclick="openModal('cert1')">
+                        <img src="1.png" alt="CCNA Intro to Networks" class="badge-img" style="border: 1px solid #e5e7eb;">
                         <p class="item-title" style="font-size: 12px;">1. Intro to Networks</p>
                     </div>
-                    
-                    <div class="badge-item" onclick="openCertModal('2.png', 'CCNA: Enterprise Networking, Security, and Automation')">
-                        <img src="2.png" alt="Certificate 2" class="badge-img" style="border-radius: 4px; border: 1px solid #e5e7eb;">
+                    <!-- Certificate 2 -->
+                    <div class="badge-item" onclick="openModal('cert2')">
+                        <img src="2.png" alt="CCNA ENSA" class="badge-img" style="border: 1px solid #e5e7eb;">
                         <p class="item-title" style="font-size: 12px;">2. CCNA ENSA</p>
                     </div>
-                   
-                    <div class="badge-item" onclick="openCertModal('3.png', 'Linux Essentials')">
-                        <img src="3.png" alt="Certificate 3" class="badge-img" style="border-radius: 4px; border: 1px solid #e5e7eb;">
+                    <!-- Certificate 3 -->
+                    <div class="badge-item" onclick="openModal('cert3')">
+                        <img src="3.png" alt="Linux Essentials" class="badge-img" style="border: 1px solid #e5e7eb;">
                         <p class="item-title" style="font-size: 12px;">3. Linux Essentials</p>
                     </div>
-                  
-                    <div class="badge-item" onclick="openCertModal('4.png', 'Introduction to Cybersecurity')">
-                        <img src="4.png" alt="Certificate 4" class="badge-img" style="border-radius: 4px; border: 1px solid #e5e7eb;">
+                    <!-- Certificate 4 -->
+                    <div class="badge-item" onclick="openModal('cert4')">
+                        <img src="4.png" alt="Intro to Cybersecurity" class="badge-img" style="border: 1px solid #e5e7eb;">
                         <p class="item-title" style="font-size: 12px;">4. Intro to Cybersecurity</p>
                     </div>
                 </div>
             </section>
 
-           
+            <!-- Badges Section (5 - 7) -->
             <section class="content-card">
-                <h2><i class="fas fa-shield-alt"></i> Digital Badges </h2>
-                <p style="font-size: 14px; margin-bottom: 10px;">Click any badge below to view its official Cisco verification description:</p>
+                <h2><i class="fas fa-shield-alt"></i> Digital Badges (5 - 7)</h2>
+                <p style="font-size: 14px; margin-bottom: 10px;">Click any badge to view its description:</p>
                 
                 <div class="badges-grid">
-
+                    <!-- Badge 5 -->
                     <div class="badge-item" onclick="openModal('badge5')">
-                        <img src="5.png" alt="Intro to IoT Badge" class="badge-img">
+                        <img src="5.png" alt="Introduction to IoT" class="badge-img">
                         <p class="item-title" style="font-size: 13px;">5. Intro to IoT</p>
                     </div>
-                   
+                    <!-- Badge 6 -->
                     <div class="badge-item" onclick="openModal('badge6')">
-                        <img src="6.png" alt="CCNA ENSA Badge" class="badge-img">
+                        <img src="6.png" alt="CCNA ENSA" class="badge-img">
                         <p class="item-title" style="font-size: 13px;">6. CCNA ENSA</p>
                     </div>
-                   
+                    <!-- Badge 7 -->
                     <div class="badge-item" onclick="openModal('badge7')">
-                        <img src="7.png" alt="Linux Essentials Badge" class="badge-img">
+                        <img src="7.png" alt="Linux Essentials" class="badge-img">
                         <p class="item-title" style="font-size: 13px;">7. Linux Essentials</p>
                     </div>
                 </div>
             </section>
 
         </div>
-
     </div>
 
-    <!-- Modal Popup Structure -->
-    <div id="badgeModal" class="modal">
+    <!-- Modal Popup Structure (Remains the same) -->
+    <div id="itemModal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal()">&times;</span>
-            <h3 id="modalTitle" style="margin-top: 0; font-size: 18px;"></h3>
-            <p id="modalDesc" style="font-size: 14px; line-height: 1.6; margin-top: 15px;"></p>
+            <div id="modalBody">
+                <!-- Image and Text will be injected here by JavaScript -->
+            </div>
         </div>
     </div>
 
-    <!-- Script for Modal and Dark Mode Toggle -->
+    <!-- Unified Script for Modal and Dark Mode -->
     <script>
-        // Badge Descriptions Data
-        const badgeData = {
+        // Consolidated Data for Certificates AND Badges
+        const itemData = {
+            // Certificates (1 - 4)
+            cert1: {
+                title: "CCNA: Introduction to Networks",
+                image: "1.png",
+                desc: "Official completion certificate for the Introduction to Networks course, covering network fundamentals, IP addressing, and basic router/switch configuration."
+            },
+            cert2: {
+                title: "CCNA: Enterprise Networking, Security, and Automation",
+                image: "2.png",
+                desc: "Official completion certificate for the Enterprise Networking, Security, and Automation course, focusing on scalable networks, OSPF routing, and network security."
+            },
+            cert3: {
+                title: "Linux Essentials",
+                image: "3.png",
+                desc: "Official completion certificate for Linux Essentials, validating foundational knowledge of Linux operating systems, command-line interface, and basic system administration."
+            },
+            cert4: {
+                title: "Introduction to Cybersecurity",
+                image: "4.png",
+                desc: "Official completion certificate for the Introduction to Cybersecurity course, covering network security threats, vulnerabilities, and mitigation techniques."
+            },
+            // Badges (5 - 7)
             badge5: {
                 title: "Introduction to IoT (Issued by Cisco)",
+                image: "5.png",
                 desc: "Cisco verifies the earner of this badge successfully completed the Introduction to Internet of Things course. The holder of this student-level credential has introductory knowledge of IoT and has an understanding how it enables the Digital Transformation along with emerging technologies such as data analytics, AI/ML and the increased attention on cybersecurity. They understand the importance of Intent Based Networking to be able to connect and secure tens of billions of new devices with ease."
             },
             badge6: {
                 title: "CCNA: Enterprise Networking, Security, and Automation (Issued by Cisco)",
+                image: "6.png",
                 desc: "Cisco verifies the earner of this badge successfully completed the Enterprise Networking, Security and Automation course and achieved this student level credential. The earner has a foundation in scalable network architectures, dynamic routing, mitigation of security threats, wide-area networks, virtualization, automation of programmable networks. Earner participated in up to 41 lab activities and accumulated up to 15 hours of hands-on labs using Cisco hardware and/or Cisco Packet Tracer tool."
             },
             badge7: {
                 title: "Linux Essentials (Issued by Cisco / NDG)",
+                image: "7.png",
                 desc: "Cisco, in collaboration with NDG, verifies that the learner has knowledge of open vs closed source applications, basic hardware concepts, Linux OS components, command line usage, file management, creating/restoring backups, system security, user/group permissions, and simple scripting. Learner has completed 24 prescriptive labs using a real Linux OS on a virtual machine interacting with the Linux operating system and build on their skills and knowledge as they progress through the course."
             }
         };
 
-        function openModal(badgeKey) {
-            const modal = document.getElementById('badgeModal');
-            const titleEl = document.getElementById('modalTitle');
-            const descEl = document.getElementById('modalDesc');
-            
-            titleEl.innerText = badgeData[badgeKey].title;
-            descEl.innerText = badgeData[badgeKey].desc;
-            modal.style.display = 'flex';
+        function openModal(itemId) {
+            const modal = document.getElementById('itemModal');
+            const modalBody = document.getElementById('modalBody');
+            const data = itemData[itemId]; // Get the correct data block
+
+            if (data) {
+                // Inject Title, Image, and Description into the modal
+                modalBody.innerHTML = `
+                    <h3 style="margin-top: 0; font-size: 18px; text-align: center; color: inherit;">${data.title}</h3>
+                    <img src="${data.image}" style="width: 100%; max-width: 400px; display: block; margin: 20px auto; border-radius: 8px; border: 1px solid #ddd;" alt="${data.title}">
+                    <p style="font-size: 14px; line-height: 1.6; color: inherit;">${data.desc}</p>
+                `;
+                modal.style.display = 'flex';
+            }
         }
 
         function closeModal() {
-            document.getElementById('badgeModal').style.display = 'none';
+            document.getElementById('itemModal').style.display = 'none';
         }
 
         // Close modal when clicking outside of content
         window.onclick = function(event) {
-            const modal = document.getElementById('badgeModal');
+            const modal = document.getElementById('itemModal');
             if (event.target == modal) {
                 modal.style.display = 'none';
             }
         }
 
-        // Dark Mode Script
+        // Dark Mode Script (Kept the same)
         const toggleBtn = document.getElementById('theme-toggle');
         const profileImg = document.getElementById('profile-img');
         const body = document.body;
@@ -211,7 +239,7 @@
         toggleBtn.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
             if (profileImg) {
-                profileImg.src = body.classList.contains('dark-mode') ? 'lasts.png' : 'light.png';
+                profileImg.src = body.classList.contains('dark-mode') ? 'me.jfif' : 'meme.jpeg';
             }
         });
     </script>
