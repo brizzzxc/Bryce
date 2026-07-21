@@ -15,31 +15,7 @@ nav {
     display: flex;
     gap: 20px;
 }
-/* Dark Mode Styles */
-body.dark-mode {
-    background-color: #1a1a1a;
-    color: #ffffff;
-}
 
-body.dark-mode nav, 
-body.dark-mode .header-card, 
-body.dark-mode .content-card {
-    background-color: #2d2d2d;
-    color: #e5e7eb;
-}
-
-body.dark-mode .item-title {
-    color: #ffffff;
-}
-
-body.dark-mode .item-subtitle, 
-body.dark-mode .subtitle {
-    color: #a0aec0;
-}
-
-body.dark-mode nav a {
-    color: #ffffff;
-}
 nav a {
     color: #374151;
     text-decoration: none;
@@ -183,41 +159,45 @@ nav a:hover { color: #111827; }
     padding-top: 2px;
 }
 
-
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .content-grid { grid-template-columns: 1fr; }
     .header-card { flex-direction: column; text-align: center; align-items: center;}
     .header-buttons {justify-content: center;}
 }
-/* Dark Mode Text Colors */
+
+/* Dark Mode Styles & Text Colors */
 body.dark-mode {
     background-color: #1a1a1a;
-    color: #ffffff; /* Sets default body text to white */
+    color: #ffffff;
 }
 
 body.dark-mode nav, 
 body.dark-mode .header-card, 
 body.dark-mode .content-card {
     background-color: #2d2d2d;
-    color: #ffffff; /* Ensures text inside cards is white */
+    color: #ffffff;
 }
 
 body.dark-mode h1, 
 body.dark-mode h2 {
-    color: #ffffff; /* Ensures all headings are white */
+    color: #ffffff;
+}
+
+/* This targets the paragraph text inside About Me / cards to make it white */
+body.dark-mode .content-card p {
+    color: #ffffff;
 }
 
 body.dark-mode .item-title {
-    color: #ffffff; /* Ensures experience/education titles are white */
+    color: #ffffff;
 }
 
 body.dark-mode .item-subtitle, 
 body.dark-mode .subtitle {
-    color: #d1d5db; /* A light grey for secondary text so it's readable but distinct */
+    color: #d1d5db;
 }
 
 body.dark-mode nav a {
-    color: #ffffff; /* Makes navigation links white */
+    color: #ffffff;
 }
