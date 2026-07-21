@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Additional styles for badges and interactive popups */
+       
         .badges-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -32,7 +32,7 @@
             object-fit: contain;
             margin-bottom: 8px;
         }
-        /* Modal Popup Styling */
+      
         .modal {
             display: none;
             position: fixed;
@@ -74,15 +74,15 @@
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">Cerificates</a>
-        <!-- Dark Mode Toggle Button -->
+       
         <button id="theme-toggle" class="btn" style="margin-left: auto;">
-            <img src="https://cdn-icons-png.flaticon.com/128/12377/12377255.png" alt="Toggle" style="width: 20px; height: 20px; vertical-align: middle;">
+            <img src="light.png" alt="Toggle" style="width: 20px; height: 20px; vertical-align: middle;">
         </button>
     </nav>
 
     <div class="main-container">
         
-        <!-- Header / Summary Card -->
+      
         <header class="header-card">
             <img src="meme.jpeg" alt="Profile Picture" id="profile-img" class="profile-img">
             <div class="header-details">
@@ -94,61 +94,55 @@
             </div>
         </header>
 
-        <!-- Content Grid for Certificates and Badges -->
+        
         <div class="content-grid">
             
-            <!-- Certificates Card (1 - 4) -->
+           
             <section class="content-card">
-                <h2><i class="fas fa-award"></i> Certificates (1 - 4)</h2>
-                <ul class="info-list">
-                    <li>
-                        <div>
-                            <p class="item-title">1. CCNA: Introduction to Networks</p>
-                            <p class="item-subtitle">Cisco Networking Academy • Systems Plus College Foundation</p>
-                        </div>
-                        <span class="item-date">03 Jan 2026</span>
-                    </li>
-                    <li>
-                        <div>
-                            <p class="item-title">2. CCNA: Enterprise Networking, Security, and Automation</p>
-                            <p class="item-subtitle">Cisco Networking Academy • Systems Plus College Foundation</p>
-                        </div>
-                        <span class="item-date">22 May 2026</span>
-                    </li>
-                    <li>
-                        <div>
-                            <p class="item-title">3. Linux Essentials</p>
-                            <p class="item-subtitle">NDG / Cisco Networking Academy • Systems Plus College Foundation</p>
-                        </div>
-                        <span class="item-date">14 Apr 2026</span>
-                    </li>
-                    <li>
-                        <div>
-                            <p class="item-title">4. Introduction to Cybersecurity</p>
-                            <p class="item-subtitle">Cisco Networking Academy • Systems Plus College Foundation</p>
-                        </div>
-                        <span class="item-date">24 Nov 2025</span>
-                    </li>
-                </ul>
+                <h2><i class="fas fa-award"></i> Certificates</h2>
+                <p style="font-size: 14px; margin-bottom: 15px;">Click any certificate to view it larger:</p>
+                
+                <div class="badges-grid">
+                  
+                    <div class="badge-item" onclick="openCertModal('1.png', 'CCNA: Introduction to Networks')">
+                        <img src="1.png" alt="Certificate 1" class="badge-img" style="border-radius: 4px; border: 1px solid #e5e7eb;">
+                        <p class="item-title" style="font-size: 12px;">1. Intro to Networks</p>
+                    </div>
+                    
+                    <div class="badge-item" onclick="openCertModal('2.png', 'CCNA: Enterprise Networking, Security, and Automation')">
+                        <img src="2.png" alt="Certificate 2" class="badge-img" style="border-radius: 4px; border: 1px solid #e5e7eb;">
+                        <p class="item-title" style="font-size: 12px;">2. CCNA ENSA</p>
+                    </div>
+                   
+                    <div class="badge-item" onclick="openCertModal('3.png', 'Linux Essentials')">
+                        <img src="3.png" alt="Certificate 3" class="badge-img" style="border-radius: 4px; border: 1px solid #e5e7eb;">
+                        <p class="item-title" style="font-size: 12px;">3. Linux Essentials</p>
+                    </div>
+                  
+                    <div class="badge-item" onclick="openCertModal('4.png', 'Introduction to Cybersecurity')">
+                        <img src="4.png" alt="Certificate 4" class="badge-img" style="border-radius: 4px; border: 1px solid #e5e7eb;">
+                        <p class="item-title" style="font-size: 12px;">4. Intro to Cybersecurity</p>
+                    </div>
+                </div>
             </section>
 
-            <!-- Badges Card (5 - 7) - Clickable for details -->
+           
             <section class="content-card">
-                <h2><i class="fas fa-shield-alt"></i> Digital Badges (5 - 7)</h2>
+                <h2><i class="fas fa-shield-alt"></i> Digital Badges </h2>
                 <p style="font-size: 14px; margin-bottom: 10px;">Click any badge below to view its official Cisco verification description:</p>
                 
                 <div class="badges-grid">
-                    <!-- Badge 5 -->
+
                     <div class="badge-item" onclick="openModal('badge5')">
                         <img src="5.png" alt="Intro to IoT Badge" class="badge-img">
                         <p class="item-title" style="font-size: 13px;">5. Intro to IoT</p>
                     </div>
-                    <!-- Badge 6 -->
+                   
                     <div class="badge-item" onclick="openModal('badge6')">
                         <img src="6.png" alt="CCNA ENSA Badge" class="badge-img">
                         <p class="item-title" style="font-size: 13px;">6. CCNA ENSA</p>
                     </div>
-                    <!-- Badge 7 -->
+                   
                     <div class="badge-item" onclick="openModal('badge7')">
                         <img src="7.png" alt="Linux Essentials Badge" class="badge-img">
                         <p class="item-title" style="font-size: 13px;">7. Linux Essentials</p>
@@ -217,7 +211,7 @@
         toggleBtn.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
             if (profileImg) {
-                profileImg.src = body.classList.contains('dark-mode') ? 'me.jfif' : 'meme.jpeg';
+                profileImg.src = body.classList.contains('dark-mode') ? 'lasts.png' : 'light.png';
             }
         });
     </script>
