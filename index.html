@@ -3,171 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BRYCE DANIELLE REMOLLO PROFOLIO</title>
+    <title>Bryce Danielle Remollo - Portfolio</title>
     <link rel="stylesheet" href="style.css">
-   
-        
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+    <!-- Navigation -->
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">Certificates</a>
-        
+        <!-- Dark Mode Toggle Button -->
+        <button id="theme-toggle" class="btn" style="margin-left: auto;">
+            <img src="https://cdn-icons-png.flaticon.com/128/12377/12377255.png" alt="Toggle" style="width: 20px; height: 20px; vertical-align: middle;">
+        </button>
     </nav>
 
+    <!-- Main Container -->
     <div class="main-container">
-        
-        <!-- Header / Summary Card -->
+
+        <!-- Header Card -->
         <header class="header-card">
             <img src="meme.jpeg" alt="Profile Picture" id="profile-img" class="profile-img">
             <div class="header-details">
-                <h1>Professional Summary</h1>
-                <p class="subtitle">IT Student & Network Administration Major</p>
+                <h1>BRYCE DANIELLE REMOLLO PORTFOLIO <span style="color: #3b82f6;">✓</span></h1>
+                <p class="subtitle">Aspiring Full-Stack Developer | Student Freelancer | UI/UX & SEO</p>
+                <div class="header-buttons">
+                    <a href="mailto:your-email@example.com" class="btn btn-primary">Send Email</a>
+                </div>
             </div>
         </header>
 
-        <!-- Content Grid for Certificates and Badges -->
+        <!-- Content Grid -->
         <div class="content-grid">
-            
-            <!-- Certificates Section (1 - 4) -->
+
+            <!-- About Me Card -->
             <section class="content-card">
-                <h2><i class="fas fa-award"></i> Certificates (1 - 4)</h2>
-                <p style="font-size: 14px; margin-bottom: 15px;">Click any certificate to view it larger:</p>
-                
-                <div class="badges-grid">
-                    <!-- Certificate 1 -->
-                    <div class="badge-item" onclick="openModal('cert1')">
-                        <img src="1.png" alt="CCNA Intro to Networks" class="badge-img" style="border: 1px solid #e5e7eb;">
-                        <p class="item-title" style="font-size: 12px;">1. Intro to Networks</p>
-                    </div>
-                    <!-- Certificate 2 -->
-                    <div class="badge-item" onclick="openModal('cert2')">
-                        <img src="2.png" alt="CCNA ENSA" class="badge-img" style="border: 1px solid #e5e7eb;">
-                        <p class="item-title" style="font-size: 12px;">2. CCNA ENSA</p>
-                    </div>
-                    <!-- Certificate 3 -->
-                    <div class="badge-item" onclick="openModal('cert3')">
-                        <img src="3.png" alt="Linux Essentials" class="badge-img" style="border: 1px solid #e5e7eb;">
-                        <p class="item-title" style="font-size: 12px;">3. Linux Essentials</p>
-                    </div>
-                    <!-- Certificate 4 -->
-                    <div class="badge-item" onclick="openModal('cert4')">
-                        <img src="4.png" alt="Intro to Cybersecurity" class="badge-img" style="border: 1px solid #e5e7eb;">
-                        <p class="item-title" style="font-size: 12px;">4. Intro to Cybersecurity</p>
-                    </div>
-                </div>
+                <h2>About Me</h2>
+                <p>
+                    My journey began with a curiosity about how things connect, which eventually led me to pursue a degree in Information Technology, majoring in Network Administration. While my core studies focus on the architecture and security of complex network systems, I am equally passionate about the digital experiences built on top of them. I believe that a solid infrastructure is only half the story; the other half is crafting the seamless, user-centric interfaces that bring technology to life.
+                </p>
+                <p style="margin-top: 15px;">
+                    I am a dedicated developer who thrives at the intersection of structural precision and creative design. Whether I am troubleshooting network protocols or architecting a robust backend, I approach every challenge with the same goal: building high-impact, scalable solutions.
+                </p>
             </section>
 
-            <!-- Badges Section (5 - 7) -->
+            <!-- Experience Card -->
             <section class="content-card">
-                <h2><i class="fas fa-shield-alt"></i> Digital Badges (5 - 7)</h2>
-                <p style="font-size: 14px; margin-bottom: 10px;">Click any badge to view its description:</p>
-                
-                <div class="badges-grid">
-                    <!-- Badge 5 -->
-                    <div class="badge-item" onclick="openModal('badge5')">
-                        <img src="5.png" alt="Introduction to IoT" class="badge-img">
-                        <p class="item-title" style="font-size: 13px;">5. Intro to IoT</p>
-                    </div>
-                    <!-- Badge 6 -->
-                    <div class="badge-item" onclick="openModal('badge6')">
-                        <img src="6.png" alt="CCNA ENSA" class="badge-img">
-                        <p class="item-title" style="font-size: 13px;">6. CCNA ENSA</p>
-                    </div>
-                    <!-- Badge 7 -->
-                    <div class="badge-item" onclick="openModal('badge7')">
-                        <img src="7.png" alt="Linux Essentials" class="badge-img">
-                        <p class="item-title" style="font-size: 13px;">7. Linux Essentials</p>
-                    </div>
-                </div>
+                <h2>Experience</h2>
+                <ul class="info-list">
+                    <li>
+                        <div>
+                            <p class="item-title"><i class="far fa-circle" style="font-size: 10px; margin-right: 8px;"></i>Front-End Development:</p>
+                            <p class="item-subtitle">I leverage HTML and CSS to build clean, responsive, and visually accessible layouts, ensuring that every user has a consistent experience across all devices.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <p class="item-title"><i class="far fa-circle" style="font-size: 10px; margin-right: 8px;"></i>Dynamic Interactivity</p>
+                            <p class="item-subtitle">I utilize JavaScript to bridge the gap between static design and interactive functionality, turning simple web pages into dynamic, engaging applications.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <p class="item-title"><i class="far fa-circle" style="font-size: 10px; margin-right: 8px;"></i>Back-End Architecture:</p>
+                            <p class="item-subtitle">Through Laravel, I build powerful, efficient, and secure server-side applications, allowing me to manage data structures and business logic with the elegance and efficiency of the PHP ecosystem.</p>
+                        </div>
+                    </li>
+                </ul>
             </section>
 
         </div>
-    </div>
 
-    <!-- Modal Popup Structure (Remains the same) -->
-    <div id="itemModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal()">&times;</span>
-            <div id="modalBody">
-                <!-- Image and Text will be injected here by JavaScript -->
+        <!-- Education Section -->
+        <div class="content-card" style="margin-top: 30px;">
+            <h2 style="margin-bottom: 10px;">Education</h2>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <div>
+                    <p class="item-title" style="font-size: 16px;">Bachelor of Science in Information Technology Major in Network Administration</p>
+                    <p class="item-subtitle">System Plus College Foundation</p>
+                </div>
+                <span class="item-date">2023 - Present</span>
             </div>
         </div>
+
     </div>
 
-    <!-- Unified Script for Modal and Dark Mode -->
+    <!-- Script for Dark Mode and Profile Image Toggle -->
     <script>
-        // Consolidated Data for Certificates AND Badges
-        const itemData = {
-            // Certificates (1 - 4)
-            cert1: {
-                title: "CCNA: Introduction to Networks",
-                image: "1.png",
-                desc: "Official completion certificate for the Introduction to Networks course, covering network fundamentals, IP addressing, and basic router/switch configuration."
-            },
-            cert2: {
-                title: "CCNA: Enterprise Networking, Security, and Automation",
-                image: "2.png",
-                desc: "Official completion certificate for the Enterprise Networking, Security, and Automation course, focusing on scalable networks, OSPF routing, and network security."
-            },
-            cert3: {
-                title: "Linux Essentials",
-                image: "3.png",
-                desc: "Official completion certificate for Linux Essentials, validating foundational knowledge of Linux operating systems, command-line interface, and basic system administration."
-            },
-            cert4: {
-                title: "Introduction to Cybersecurity",
-                image: "4.png",
-                desc: "Official completion certificate for the Introduction to Cybersecurity course, covering network security threats, vulnerabilities, and mitigation techniques."
-            },
-            // Badges (5 - 7)
-            badge5: {
-                title: "Introduction to IoT (Issued by Cisco)",
-                image: "5.png",
-                desc: "Cisco verifies the earner of this badge successfully completed the Introduction to Internet of Things course. The holder of this student-level credential has introductory knowledge of IoT and has an understanding how it enables the Digital Transformation along with emerging technologies such as data analytics, AI/ML and the increased attention on cybersecurity. They understand the importance of Intent Based Networking to be able to connect and secure tens of billions of new devices with ease."
-            },
-            badge6: {
-                title: "CCNA: Enterprise Networking, Security, and Automation (Issued by Cisco)",
-                image: "6.png",
-                desc: "Cisco verifies the earner of this badge successfully completed the Enterprise Networking, Security and Automation course and achieved this student level credential. The earner has a foundation in scalable network architectures, dynamic routing, mitigation of security threats, wide-area networks, virtualization, automation of programmable networks. Earner participated in up to 41 lab activities and accumulated up to 15 hours of hands-on labs using Cisco hardware and/or Cisco Packet Tracer tool."
-            },
-            badge7: {
-                title: "Linux Essentials (Issued by Cisco / NDG)",
-                image: "7.png",
-                desc: "Cisco, in collaboration with NDG, verifies that the learner has knowledge of open vs closed source applications, basic hardware concepts, Linux OS components, command line usage, file management, creating/restoring backups, system security, user/group permissions, and simple scripting. Learner has completed 24 prescriptive labs using a real Linux OS on a virtual machine interacting with the Linux operating system and build on their skills and knowledge as they progress through the course."
-            }
-        };
-
-        function openModal(itemId) {
-            const modal = document.getElementById('itemModal');
-            const modalBody = document.getElementById('modalBody');
-            const data = itemData[itemId]; // Get the correct data block
-
-            if (data) {
-                // Inject Title, Image, and Description into the modal
-                modalBody.innerHTML = `
-                    <h3 style="margin-top: 0; font-size: 18px; text-align: center; color: inherit;">${data.title}</h3>
-                    <img src="${data.image}" style="width: 100%; max-width: 400px; display: block; margin: 20px auto; border-radius: 8px; border: 1px solid #ddd;" alt="${data.title}">
-                    <p style="font-size: 14px; line-height: 1.6; color: inherit;">${data.desc}</p>
-                `;
-                modal.style.display = 'flex';
-            }
-        }
-
-        function closeModal() {
-            document.getElementById('itemModal').style.display = 'none';
-        }
-
-        // Close modal when clicking outside of content
-        window.onclick = function(event) {
-            const modal = document.getElementById('itemModal');
-            if (event.target == modal) {
-                modal.style.display = 'none';
-            }
-        }
-
-        // Dark Mode Script (Kept the same)
         const toggleBtn = document.getElementById('theme-toggle');
         const profileImg = document.getElementById('profile-img');
         const body = document.body;
@@ -175,9 +98,9 @@
         toggleBtn.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
             if (profileImg) {
-                profileImg.src = body.classList.contains('dark-mode') ? 'me.jfif' : 'meme.jpeg';
+                profileImg.src = body.classList.contains('dark-mode') ? 'light.png' : 'meme.lasts';
             }
         });
     </script>
-
+</body>
 </html>
