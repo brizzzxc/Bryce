@@ -2,30 +2,224 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Resume - </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About & Resume - Bryce Danielle Remollo</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Additional styles for badges and interactive popups */
+        .badges-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .badge-item {
+            text-align: center;
+            cursor: pointer;
+            background: rgba(0,0,0,0.03);
+            padding: 10px;
+            border-radius: 8px;
+            transition: transform 0.2s, background 0.2s;
+        }
+        .badge-item:hover {
+            transform: translateY(-3px);
+            background: rgba(0,0,0,0.06);
+        }
+        .badge-img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 8px;
+        }
+        /* Modal Popup Styling */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.6);
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+            background-color: #ffffff;
+            color: #111827;
+            padding: 25px;
+            border-radius: 12px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        body.dark-mode .modal-content {
+            background-color: #2d2d2d;
+            color: #ffffff;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: inherit;
+        }
+    </style>
 </head>
 <body>
+
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About & Resume</a>
+        <!-- Dark Mode Toggle Button -->
+        <button id="theme-toggle" class="btn" style="margin-left: auto;">
+            <img src="https://cdn-icons-png.flaticon.com/128/12377/12377255.png" alt="Toggle" style="width: 20px; height: 20px; vertical-align: middle;">
+        </button>
     </nav>
-    <section>
-        <h1>About Me</h1>
-        <!-- Add your image file name below -->
-        <img src="your-photo.jpg" alt="Profile Picture">
+
+    <div class="main-container">
         
-        <h2>Professional Summary</h2>
-        <p>[Insert your summary here]</p>
+        <!-- Header / Summary Card -->
+        <header class="header-card">
+            <img src="meme.jpeg" alt="Profile Picture" id="profile-img" class="profile-img">
+            <div class="header-details">
+                <h1>Professional Summary</h1>
+                <p class="subtitle">IT Student & Network Administration Major</p>
+                <p style="color: inherit; line-height: 1.6; margin-top: 10px;">
+                    Currently pursuing a degree in Information Technology with a major in Network Administration at System Plus College Foundation. Passionate about bridging secure infrastructure with high-impact, clean web design and full-stack development.
+                </p>
+            </div>
+        </header>
 
-        <h2>Skills</h2>
-        <ul>
-            <li>[Insert Skill 1]</li>
-            <li>[Insert Skill 2]</li>
-        </ul>
+        <!-- Content Grid for Certificates and Badges -->
+        <div class="content-grid">
+            
+            <!-- Certificates Card (1 - 4) -->
+            <section class="content-card">
+                <h2><i class="fas fa-award"></i> Certificates (1 - 4)</h2>
+                <ul class="info-list">
+                    <li>
+                        <div>
+                            <p class="item-title">1. CCNA: Introduction to Networks</p>
+                            <p class="item-subtitle">Cisco Networking Academy • Systems Plus College Foundation</p>
+                        </div>
+                        <span class="item-date">03 Jan 2026</span>
+                    </li>
+                    <li>
+                        <div>
+                            <p class="item-title">2. CCNA: Enterprise Networking, Security, and Automation</p>
+                            <p class="item-subtitle">Cisco Networking Academy • Systems Plus College Foundation</p>
+                        </div>
+                        <span class="item-date">22 May 2026</span>
+                    </li>
+                    <li>
+                        <div>
+                            <p class="item-title">3. Linux Essentials</p>
+                            <p class="item-subtitle">NDG / Cisco Networking Academy • Systems Plus College Foundation</p>
+                        </div>
+                        <span class="item-date">14 Apr 2026</span>
+                    </li>
+                    <li>
+                        <div>
+                            <p class="item-title">4. Introduction to Cybersecurity</p>
+                            <p class="item-subtitle">Cisco Networking Academy • Systems Plus College Foundation</p>
+                        </div>
+                        <span class="item-date">24 Nov 2025</span>
+                    </li>
+                </ul>
+            </section>
 
-        <h2>Experience</h2>
-        <p>[Insert your work history here]</p>
-    </section>
+            <!-- Badges Card (5 - 7) - Clickable for details -->
+            <section class="content-card">
+                <h2><i class="fas fa-shield-alt"></i> Digital Badges (5 - 7)</h2>
+                <p style="font-size: 14px; margin-bottom: 10px;">Click any badge below to view its official Cisco verification description:</p>
+                
+                <div class="badges-grid">
+                    <!-- Badge 5 -->
+                    <div class="badge-item" onclick="openModal('badge5')">
+                        <img src="5.png" alt="Intro to IoT Badge" class="badge-img">
+                        <p class="item-title" style="font-size: 13px;">5. Intro to IoT</p>
+                    </div>
+                    <!-- Badge 6 -->
+                    <div class="badge-item" onclick="openModal('badge6')">
+                        <img src="6.png" alt="CCNA ENSA Badge" class="badge-img">
+                        <p class="item-title" style="font-size: 13px;">6. CCNA ENSA</p>
+                    </div>
+                    <!-- Badge 7 -->
+                    <div class="badge-item" onclick="openModal('badge7')">
+                        <img src="7.png" alt="Linux Essentials Badge" class="badge-img">
+                        <p class="item-title" style="font-size: 13px;">7. Linux Essentials</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+    </div>
+
+    <!-- Modal Popup Structure -->
+    <div id="badgeModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3 id="modalTitle" style="margin-top: 0; font-size: 18px;"></h3>
+            <p id="modalDesc" style="font-size: 14px; line-height: 1.6; margin-top: 15px;"></p>
+        </div>
+    </div>
+
+    <!-- Script for Modal and Dark Mode Toggle -->
+    <script>
+        // Badge Descriptions Data
+        const badgeData = {
+            badge5: {
+                title: "Introduction to IoT (Issued by Cisco)",
+                desc: "Cisco verifies the earner of this badge successfully completed the Introduction to Internet of Things course. The holder of this student-level credential has introductory knowledge of IoT and has an understanding how it enables the Digital Transformation along with emerging technologies such as data analytics, AI/ML and the increased attention on cybersecurity. They understand the importance of Intent Based Networking to be able to connect and secure tens of billions of new devices with ease."
+            },
+            badge6: {
+                title: "CCNA: Enterprise Networking, Security, and Automation (Issued by Cisco)",
+                desc: "Cisco verifies the earner of this badge successfully completed the Enterprise Networking, Security and Automation course and achieved this student level credential. The earner has a foundation in scalable network architectures, dynamic routing, mitigation of security threats, wide-area networks, virtualization, automation of programmable networks. Earner participated in up to 41 lab activities and accumulated up to 15 hours of hands-on labs using Cisco hardware and/or Cisco Packet Tracer tool."
+            },
+            badge7: {
+                title: "Linux Essentials (Issued by Cisco / NDG)",
+                desc: "Cisco, in collaboration with NDG, verifies that the learner has knowledge of open vs closed source applications, basic hardware concepts, Linux OS components, command line usage, file management, creating/restoring backups, system security, user/group permissions, and simple scripting. Learner has completed 24 prescriptive labs using a real Linux OS on a virtual machine interacting with the Linux operating system and build on their skills and knowledge as they progress through the course."
+            }
+        };
+
+        function openModal(badgeKey) {
+            const modal = document.getElementById('badgeModal');
+            const titleEl = document.getElementById('modalTitle');
+            const descEl = document.getElementById('modalDesc');
+            
+            titleEl.innerText = badgeData[badgeKey].title;
+            descEl.innerText = badgeData[badgeKey].desc;
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('badgeModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside of content
+        window.onclick = function(event) {
+            const modal = document.getElementById('badgeModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        // Dark Mode Script
+        const toggleBtn = document.getElementById('theme-toggle');
+        const profileImg = document.getElementById('profile-img');
+        const body = document.body;
+
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (profileImg) {
+                profileImg.src = body.classList.contains('dark-mode') ? 'me.jfif' : 'meme.jpeg';
+            }
+        });
+    </script>
 </body>
 </html>
