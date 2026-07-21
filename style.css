@@ -166,7 +166,7 @@ nav a:hover { color: #111827; }
     .header-buttons {justify-content: center;}
 }
 
-/* Dark Mode Styles & Text Colors */
+/* --- Updated Dark Mode Text Fix --- */
 body.dark-mode {
     background-color: #1a1a1a;
     color: #ffffff;
@@ -184,9 +184,10 @@ body.dark-mode h2 {
     color: #ffffff;
 }
 
-/* This targets the paragraph text inside About Me / cards to make it white */
-body.dark-mode .content-card p {
-    color: #ffffff;
+/* Highly specific selector to force About Me and card text to white */
+body.dark-mode .content-card p,
+body.dark-mode .content-card span {
+    color: #ffffff !important;
 }
 
 body.dark-mode .item-title {
@@ -195,7 +196,7 @@ body.dark-mode .item-title {
 
 body.dark-mode .item-subtitle, 
 body.dark-mode .subtitle {
-    color: #d1d5db;
+    color: #e5e7eb;
 }
 
 body.dark-mode nav a {
