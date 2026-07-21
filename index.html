@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BRYCE DANIELLE REMOLLO PROFOLIO</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Add FontAwesome for icons if you wish, or remove the <i> tags -->
+   
         
 </head>
 <body>
@@ -17,8 +17,7 @@
     </nav>
 
     <div class="main-container">
-        
-        <!-- Header Card -->
+     
       <header class="header-card">
     <img src="lasts.jpeg" alt="" class="profile-img" id="profile-img">
     <div class="header-details">
@@ -28,7 +27,7 @@
             <a href="mailto:your-email@example.com?subject=Inquiry from Portfolio Website" class="btn btn-primary">
                 <i class="far fa-envelope"></i> Send Email
             </a>
-            <!-- Dark Mode Toggle Button with your specific logo -->
+          
             <button id="theme-toggle" class="btn">
                 <img src="https://cdn-icons-png.flaticon.com/128/12377/12377255.png" alt="Toggle" style="width: 20px; height: 20px; vertical-align: middle;">
             </button>
@@ -104,6 +103,10 @@
         // Swaps between light mode (meme.jpeg) and dark mode (me.jfif)
         profileImg.src = body.classList.contains('dark-mode') ? 'lasts.png' : 'light.png';
     });
+    // Ensures the correct image matches the initial state on page load
+if (!body.classList.contains('dark-mode')) {
+    profileImg.src = 'your-light-mode-filename.jpg'; // Put your actual light mode filename here
+}
 </script>
 </body>
 
